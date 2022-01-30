@@ -49,7 +49,7 @@ class TransformerDecoder(nn.Module):
         super().__init__()
         self.layers = nn.ModuleList(
             [
-                TransformerDecoder(dim_model, num_heads, dim_feedforward, dropout)
+                TransformerDecoderLayer(dim_model, num_heads, dim_feedforward, dropout)
                 for _ in range(num_layers)
             ]
         )
